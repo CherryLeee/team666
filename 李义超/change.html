@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>选项卡练习</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .main{
+            width: 300px;
+            margin: 50px auto;
+        }
+        .main ul {
+            zoom: 1;
+        }
+        .main ul:after{
+            overflow: hidden;
+            clear: both;
+            display: block;
+            height: 0;
+            content: '';
+            font-size: 0;
+            visibility: hidden;
+        }
+        .main ul li{
+            position: relative;
+            top:1px;
+            margin-right: 10px;
+            border: 1px solid #000000;
+            border-bottom-color: rosybrown;
+            float: left;
+            height: 20px;
+            width: 50px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .main ul li.cur{
+            background-color: rosybrown
+        }
+        .main div{
+            border:1px solid #000000;
+            float: left;
+            display: none;
+            height: 100px;
+            width: 300px;
+            line-height: 100px;
+            text-align: center;
+            background-color: rosybrown;
+        }
+        .main div.cur{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="main" id="main">
+    <ul>
+        <li class="cur">你</li>
+        <li>我</li>
+        <li>它</li>
+        <div class="cur">昨天</div>
+        <div>今天</div>
+        <div>明天</div>
+    </ul>
+</div>
+<script src="js/change.js"></script>
+</body>
+</html>
